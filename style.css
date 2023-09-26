@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'mist';
+    src: url(font/Moist-P42x.ttf);
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.header {
+    font-family: 'mist';
+    font-size: xxx-large;
+    text-align: center;
+    padding: 1em;
+}
+
+.content {
+    display: flex;
+    border: 3px;
+    border-color: white;
+    justify-content: center;
+    padding: 3em;
+    gap: 4em;
+}
+
+button {
+    width: 100%;
+    font-size: 20em;
+    color: white;
+    background-color: rgb(35, 35, 35);
+    border: solid;
+    border-radius: 0.1em;
+    transition: background-color 500ms ease-out 10ms;
+}
+
+button:hover {
+    background-color: rgb(45, 50, 56);
+}
+
+button:active {
+    transform: translateY(4px);
+    background-color: white;
+}
+
+.score {
+    font-family: 'mist';
+    font-size: xx-large;
+    text-align: center;
+}
+
+#rock {
+    color: blueviolet;
+    box-shadow: 0 0 40px 5px blueviolet;
+}
+
+#paper {
+    color: aqua;
+    box-shadow: 0 0 40px 5px;
+}
+
+#scissors {
+    color: crimson;
+    box-shadow: 0 0 40px 5px;
+
+}

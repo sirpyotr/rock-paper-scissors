@@ -1,40 +1,47 @@
+let playerScore = 0;
+let computerScore = 0;
+
+
 function getComputerChoice() {
 	let n = Math.floor(Math.random() * 3);
 	switch (n) {
 		case 0:
-			return "Rock";
+			return "rock";
 		case 1:
-			return "Paper";
+			return "paper";
 		case 2:
-			return "Scissors";
+			return "scissors";
 	}
 }
 
-function play() {
-	let playerSelection = prompt(
-		"Select: Rock, Paper or Scissors",
-		"Rock"
-	).toLowerCase();
+function play(e) {
+	let playerSelection = e.target.id
+	console.log(playerSelection)
 	let computerSelection = getComputerChoice();
+	console.log(computerSelection)
 	if (playerSelection === computerSelection) {
+		console.log('Tie');
 		return "Tie!";
 	} else if (
-		(playerSelection === "rock" && computerSelection === "Scissors") ||
-		(playerSelection === "paper" && computerSelection === "Rock") ||
-		(playerSelection === "scissors" && computerSelection === "Paper")
+		(playerSelection === "rock" && computerSelection === "scissors") ||
+		(playerSelection === "paper" && computerSelection === "rock") ||
+		(playerSelection === "scissors" && computerSelection === "paper")
 	) {
+		console.log('Win')
 		return "Win!";
 	} else {
+		console.log('lose')
 		return "Lose!...";
 	}
 }
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => button.addEventListener('click', play));
 
 function updateScore() {
 	score = playerScore + " : " + computerScore;
 }
 
-let playerScore = 0;
-let computerScore = 0;
 let score = playerScore + " : " + computerScore;
 
 // eslint-disable-next-line no-unused-vars
