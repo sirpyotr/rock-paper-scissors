@@ -12,8 +12,19 @@ body {
     font-family: 'mist';
     font-size: xxx-large;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
 }
+
+#description {
+    font-size: 0.4em;
+}
+
+.choice, .result, .score {
+    font-family: 'mist';
+    font-size: xx-large;
+    text-align: center;
+}
+
 
 .content {
     display: flex;
@@ -43,11 +54,11 @@ button:active {
     background-color: white;
 }
 
-.score {
+/* .score {
     font-family: 'mist';
     font-size: xx-large;
     text-align: center;
-}
+} */
 
 #rock {
     color: blueviolet;
